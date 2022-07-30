@@ -1,0 +1,32 @@
+{
+  "name": "MoM Assist",
+  "description": "A few quality of life features that shouldn't violate the Million on Mars terms of service.",
+  "homepage_url": "https://github.com/robert-blue/mom-assist",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "settings.js",
+        "include.js",
+        "markPaths.js",
+        "after.js"
+      ],
+      "matches": [
+        "https://*.milliononmars.io/*",
+        "http://*.milliononmars.io/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.milliononmars.io/*",
+    "http://*.milliononmars.io/*"
+  ]
+}
